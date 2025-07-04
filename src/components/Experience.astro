@@ -1,27 +1,31 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCIE = [
+const EXPERIENCE = [
     {
-        date: "Actualmente...",
-        title: "Estudiate",
+        date: "Agosto 2021 - Actualmente",
+        title: "Ingeniería Informática",
+        company:
+            "Tecnológico Nacional De Mexico – Instituto Tecnológico De Tijuana",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        link: "https://github.com/Gordillo4045",
+            "Desarrollo de aplicaciones web y móviles, con tecnologías como React, Next.js, MAUI, entre otras.",
+        // link: "https://github.com/Gordillo4045",
     },
     {
-        date: "Septiembre 2022",
-        title: "Estudiante",
+        date: "Agosto 2019 - Agosto 2021",
+        title: "Especialidad en Programación",
+        company:
+            "Centro de Bachillerato Tecnológico Industrial y de Servicio No. 116",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "Desarrollo de aplicaciones, con tecnologías como .NET, entre otras.",
     },
 ];
 ---
 
-<ol class="relative border-s border-gray-200 ml-3">
+<ol class="relative mt-16">
     {
-        EXPERIENCIE.map((experiencie) => (
-            <li class="mb-10 ms-4">
-                <ExperienceItem {...experiencie} />
+        EXPERIENCE.map((experience) => (
+            <li class="">
+                <ExperienceItem {...experience} />
             </li>
         ))
     }

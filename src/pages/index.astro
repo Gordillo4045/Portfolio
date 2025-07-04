@@ -1,75 +1,40 @@
 ---
-import Badge from "../components/Badge.astro";
-import Layout from "../layouts/Layout.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import SocialPill from "../components/SocialPill.astro";
-import MailIcon from "../components/icons/Mail.astro";
-import Experience from "../components/Experience.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Briefcase from "../components/icons/Briefcase.astro";
-import CodeIcon from "../components/icons/Code.astro";
-import Projects from "../components/Projects.astro";
+import Layout from "@/layouts/Layout.astro";
+
+import Briefcase from "@/components/icons/Briefcase.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import Experience from "@/components/Experience.astro";
+import Projects from "@/components/Projects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Hero from "@/components/Hero.astro";
+import TitleSection from "@/components/TitleSection.astro";
 ---
 
-<Layout title="Porfolio de andre - Desarrollador y Programador web">
+<Layout
+	title="Porfolio de Andre - Desarrollador y Programador Web con 2 años de experiencia"
+	description="Contrata a Andre para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+>
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-32">
-			<img
-				class="rounded-full size-12 mb-4"
-				src="https://icon-library.com/images/facebook-user-icon/facebook-user-icon-22.jpg"
-				alt="photo"
-			/>
-			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-			>
-				Hey, soy Andre<a
-					href="https://www.linkedin.com"
-					target="_blank"
-					class="flex items-center justify-center"
-				>
-					<Badge>Disponible para trabajar</Badge>
-				</a>
-			</h1>
-			<h2 class="text-xl lg:text-2xl text-balance max-w-[700px]">
-				<span>+2 años de experiencia.</span>
-				<span class="text-yellow-200/90">Desarrollador Web.</span>
-				<span class="text-green-200/90">De Tijuana, Mexico.</span>
-				<span class="opacity-85"
-					>Especializado en Crear apliaciones unicas.</span
-				>
-			</h2>
-
-			<nav class="flex gap-4 mt-8 flex-wrap">
-				<SocialPill href="https://www.linkedin.com">
-					<LinkedInIcon class="size-4 md:size-6" />
-					 LinkedIn
-				</SocialPill>
-				<SocialPill href="https://github.com/Gordillo4045">
-					<GitHubIcon class="size-4 md:size-6" />
-					 GithHub
-				</SocialPill>
-				<SocialPill href="mailto:andre.vizuet14@gmail.com">
-					<MailIcon class="size-4 md:size-6" />
-					 andre.vizuet14@gmail.com
-				</SocialPill>
-			</nav>
-		</SectionContainer>
-
-		<SectionContainer id="experiencia">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<Briefcase class="size-7" />
-				 Experiencia laboral
-			</h2>
-			<Experience />
-		</SectionContainer>
-
-		<SectionContainer id="proyectos">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<CodeIcon class="size-7" />
-				 Proyectos
-			</h2>
-			<Projects />
+		<SectionContainer class="py-16 md:py-36">
+			<Hero />
 		</SectionContainer>
 	</main>
+
+	<div class="space-y-24">
+		<SectionContainer id="proyectos">
+			<TitleSection>
+				<CodeIcon class="size-7" />
+				Proyectos
+			</TitleSection>
+			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="educacion">
+			<TitleSection>
+				<Briefcase class="size-8" />
+				Educación
+			</TitleSection>
+			<Experience />
+		</SectionContainer>
+	</div>
 </Layout>
